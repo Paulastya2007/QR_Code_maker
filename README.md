@@ -6,3 +6,10 @@ Here is the Demo
 
 
 ![8416c17e-80b6-432d-b006-3969f5ac6c15](https://github.com/Paulastya2007/QR_Code_maker/assets/86978708/d12f9150-8a45-48ee-95ba-20937b79cb9b)
+
+Here is a demo video how it works
+
+https://github.com/Paulastya2007/QR_Code_maker/assets/86978708/cd2d7575-f9b8-4775-9788-4d09e46941e5
+
+
+
