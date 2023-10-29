@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern QR Code Generator</title>
+    
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.generate-button {
+    display: block;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.generate-button:hover {
+    background-color: #0056b3;
+}
+
+.qrcode {
+    margin-top: 20px;
+}
+
+    </style>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">QR Code Generator</h1>
+        <label for="text-input">Enter text:</label>
+        <input type="text" id="text-input" class="input" placeholder="Enter text">
+        <button class="generate-button" onclick="generateQRCode()">Generate QR Code</button>
+        <div id="qrcode" class="qrcode"></div>
+    </div>
+
+    <script>
+        function generateQRCode() {
+            const text = document.getElementById('text-input').value;
+            const qrcode = new QRCode(document.getElementById('qrcode'), {
+                text: text,
+                width: 128,
+                height: 128
+            });
+        }
+    </script>
+</body>
+</html>
